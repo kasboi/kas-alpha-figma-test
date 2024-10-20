@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <nav class="sidebar">
+            <!-- <button id="toggle-btn" class="toggle-btn">Toggle</button> -->
+            <ul class="menu">
+                <li class="menu-item">
+                    <span class="icon-extended">
+                        <img
+                            src="./assets/icons/home.svg"
+                            alt="home icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <!-- Icon when extended -->
+                    <span class="icon-collapsed">
+                        <img
+                            src="./assets/icons/home-mini.svg"
+                            alt="home icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <!-- Icon when collapsed -->
+                    <span class="text">Home</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon-extended">
+                        <img
+                            src="./assets/icons/calendar.svg"
+                            alt="events icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="icon-collapsed">
+                        <img
+                            src="./assets/icons/calendar-mini.svg"
+                            alt="events icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="text">Events</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon-extended">
+                        <img
+                            src="./assets/icons/speaker.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="icon-collapsed">
+                        <img
+                            src="./assets/icons/speaker-mini.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="text">Speaker</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon-extended">
+                        <img
+                            src="./assets/icons/document.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="icon-collapsed">
+                        <img
+                            src="./assets/icons/document-mini.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="text">Reports</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon-extended">
+                        <img
+                            src="./assets/icons/bell.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="icon-collapsed">
+                        <img
+                            src="./assets/icons/bell-mini.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="text">Notifications</span>
+                    <span class="text-icon">3</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon-extended">
+                        <img
+                            src="./assets/icons/chat.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="icon-collapsed">
+                        <img
+                            src="./assets/icons/chat-mini.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="text">Messages</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon-extended">
+                        <img
+                            src="./assets/icons/settings.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="icon-collapsed">
+                        <img
+                            src="./assets/icons/settings-mini.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="text">Settings</span>
+                </li>
+                <li id="collapse-btn" class="menu-item">
+                    <span class="icon-extended">
+                        <img
+                            src="./assets/icons/double-chevron-left.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="icon-collapsed">
+                        <img
+                            src="./assets/icons/double-chevron-right.svg"
+                            alt="speaker icon"
+                            width="28"
+                            height="28"
+                        />
+                    </span>
+                    <span class="text">Collapse</span>
+                </li>
+                <li id="toggle-btn" class="menu-item">
+                    <span class="icon">
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                    </span>
+                    <span class="text">Dark mode</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon">
+                        <img
+                            src="./assets/icons/Avatar.svg"
+                            alt="Avatar icon"
+                        />
+                        <div class="icon-text">
+                            <span>Rudra Devi</span>
+                            <span>rudra.devi@gmail.com</span>
+                        </div>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section class="metric-section">
+                <h1>Welcome! here's your summary</h1>
+                <div class="metric-container">
+                    <div class="metric-card">
+                        <div class="metric-card__heading">
+                            <h2>Total Events</h2>
+                            <ion-icon
+                                name="information-circle-outline"
+                            ></ion-icon>
+                        </div>
+                        <div class="metric-card__value">
+                            <span>100,000</span>
+                            <div class="metric-card__value-percentage">
+                                <img
+                                    src="./assets/icons/arrow-up.svg"
+                                    alt="metric value"
+                                />
+                                <span class="percentage-green">+5.0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card__heading">
+                            <h2>Active Speakers</h2>
+                            <ion-icon
+                                name="information-circle-outline"
+                            ></ion-icon>
+                        </div>
+                        <div class="metric-card__value">
+                            <span>25</span>
+                            <div class="metric-card__value-percentage">
+                                <img
+                                    src="./assets/icons/arrow-down.svg"
+                                    alt="metric value"
+                                />
+                                <span class="percentage-red">-5.0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card__heading">
+                            <h2>Total Registrations</h2>
+                            <ion-icon
+                                name="information-circle-outline"
+                            ></ion-icon>
+                        </div>
+                        <div class="metric-card__value">
+                            <span>300</span>
+                            <div class="metric-card__value-percentage">
+                                <img
+                                    src="./assets/icons/arrow-up.svg"
+                                    alt="metric value"
+                                />
+                                <span>+5.0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card__heading">
+                            <h2>Total Revenue</h2>
+                            <ion-icon
+                                name="information-circle-outline"
+                            ></ion-icon>
+                        </div>
+                        <div class="metric-card__value">
+                            <span>&dollar;500,000</span>
+                            <div class="metric-card__value-percentage">
+                                <img
+                                    src="./assets/icons/arrow-up.svg"
+                                    alt="metric value"
+                                />
+                                <span>+5.0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="chart-section">
+                <h2>Event Registrations per month</h2>
+                <div class="event-container">
+                    <div class="event-chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="event-carousel">
+                        <div class="event-carousel__slides fade">
+                            <img src="./assets/img/carousel_1.png" />
+                            <div class="event-carousel__text">
+                                <h3>Latest News & Updates</h3>
+                                <span
+                                    >Turpis interdum nunc varius ornare
+                                    dignissim pretium. Massa ornare quis aliquet
+                                    sed vitae. Sed velit nisi, fermentum erat.
+                                    Fringilla purus, erat fringilla tincidunt
+                                    quisque non. Pellentesque in ut
+                                    tellus.</span
+                                >
+                            </div>
+                        </div>
+                        <div class="event-carousel__slides fade">
+                            <img src="./assets/img/carousel_2.png" />
+                            <div class="event-carousel__text">
+                                <h3>Latest News & Updates</h3>
+                                <span
+                                    >Turpis interdum nunc varius ornare
+                                    dignissim pretium. Massa ornare quis aliquet
+                                    sed vitae. Sed velit nisi, fermentum erat.
+                                    Fringilla purus, erat fringilla tincidunt
+                                    quisque non. Pellentesque in ut
+                                    tellus.</span
+                                >
+                            </div>
+                        </div>
+                        <div class="event-carousel__slides fade">
+                            <img src="./assets/img/carousel_3.png" />
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+                        <!-- The dots/circles -->
+                        <div class="dot-container" style="text-align: center">
+                            <span class="dot" id="1"></span>
+                            <span class="dot" id="2"></span>
+                            <span class="dot" id="3"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="event-details">
+                <h2>Events History</h2>
+                <div class="event-inputs">
+                    <label for="search" class="search-input__label">
+                        <input
+                            type="search"
+                            name="search"
+                            id="search"
+                            class="search-input__input"
+                            placeholder="Search..."
+                        />
+                        <ion-icon
+                            name="search-outline"
+                            class="search-input__icon"
+                        ></ion-icon>
+                    </label>
+                    <select name="date" id="date">
+                        <option value="Date">Date</option>
+                    </select>
+                    <select name="status" id="status">
+                        <option value="Status">Status</option>
+                    </select>
+                    <select name="name" id="name">
+                        <option value="name">Name</option>
+                    </select>
+                    <span class="event-inputs__results-num"
+                        >Displaying 100 results</span
+                    >
+                    <div class="event-details__sort">
+                        <span>Sort:</span>
+                        <select name="recent" id="recent">
+                            <option value="most-recent">Most Recent</option>
+                        </select>
+                        <button>
+                            <ion-icon name="ellipsis-vertical"></ion-icon>
+                        </button>
+                        <button>
+                            <ion-icon name="download-outline"></ion-icon>
+                            <span>Export</span>
+                        </button>
+                    </div>
+                </div>
+                <table class="events-table">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Speaker</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            data-event-details='{"name":"Event 1", "date":"2024-10-25", "description":"Description of Event 1"}'
+                        >
+                            <td>Cloud Innovation Summit</td>
+                            <td>2024-10-15</td>
+                            <td>Jane Doe</td>
+                            <td>
+                                <span class="status completed"
+                                    ><div class="dot"></div>
+                                    Completed</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Blockchain Revolution Conference</td>
+                            <td>2024-11-05</td>
+                            <td>Dr. Peter Smith</td>
+                            <td>
+                                <span class="status in-progress"
+                                    ><div class="dot"></div>
+                                    In Progress</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>AI in Healthcare Symposium</td>
+                            <td>2024-12-01</td>
+                            <td>Dr. Aisha Malik</td>
+                            <td>
+                                <span class="status completed"
+                                    ><div class="dot"></div>
+                                    Completed</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Future of Fintech Forum</td>
+                            <td>2024-10-25</td>
+                            <td>Jane Lee</td>
+                            <td>
+                                <span class="status completed"
+                                    ><div class="dot"></div>
+                                    Completed</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Data Analytics in Business</td>
+                            <td>2024-11-12</td>
+                            <td>Rachel Moore</td>
+                            <td>
+                                <span class="status completed"
+                                    ><div class="dot"></div>
+                                    Completed</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sustainable Energy Expo</td>
+                            <td>2024-09-28</td>
+                            <td>Prof. Alan Green</td>
+                            <td>
+                                <span class="status completed"
+                                    ><div class="dot"></div>
+                                    Completed</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Web3 Interfaces Workshop</td>
+                            <td>2024-10-10</td>
+                            <td>Kevin Adams</td>
+                            <td>
+                                <span class="status in-progress"
+                                    ><div class="dot"></div>
+                                    In Progress</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cyber Security for Startups</td>
+                            <td>2024-11-19</td>
+                            <td>Emily Zhang</td>
+                            <td>
+                                <span class="status completed"
+                                    ><div class="dot"></div>
+                                    Completed</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Smart Cities Forum</td>
+                            <td>2024-10-18</td>
+                            <td>Dr. Maria Hernandez</td>
+                            <td>
+                                <span class="status in-progress"
+                                    ><div class="dot"></div>
+                                    In Progress</span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tech Safari Mixer</td>
+                            <td>2024-09-39</td>
+                            <td>Guest Panel</td>
+                            <td>
+                                <span class="status in-progress"
+                                    ><div class="dot"></div>
+                                    In Progress</span
+                                >
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Modal -->
+                <div id="eventModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 id="modalEventName"></h2>
+                        <p id="modalEventDate"></p>
+                        <p id="modalEventDescription"></p>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="table-controls">
+                    <div class="pagination">
+                        <button class="pagination-btn">&#10094;</button>
+                        <button class="page-number active">1</button>
+                        <button class="page-number">2</button>
+                        <button class="page-number">3</button>
+                        <button class="pagination-btn">&#10095;</button>
+                    </div>
+                    <div class="show-rows">
+                        Show:
+                        <select name="rows" id="rows">
+                            <option value="10">10 rows</option>
+                            <option value="20">20 rows</option>
+                            <option value="50">50 rows</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script type="module" src="/main.js"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </body>
+</html>
