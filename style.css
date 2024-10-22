@@ -508,10 +508,11 @@ main h2 {
 /* EVENT DETAILS TABLE */
 .event-inputs {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .search-input__label {
@@ -524,7 +525,7 @@ main h2 {
     outline: none;
     padding: 12px 16px 12px 32px;
     color: var(--text-color);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .search-input__icon {
@@ -543,7 +544,7 @@ select {
     outline: none;
     padding: 12px 10px;
     color: var(--text-color);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .event-inputs__results-num {
@@ -563,7 +564,7 @@ select {
     outline: none;
     padding: 12px 14px;
     color: var(--text-color);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* TABLE */
@@ -572,7 +573,7 @@ select {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 14px;
-    height: 528px;
+    height: auto;
 }
 
 .events-table th {

@@ -199,10 +199,7 @@
                 </li>
                 <li class="menu-item">
                     <span class="icon">
-                        <img
-                            src="./assets/icons/Avatar.svg"
-                            alt="Avatar icon"
-                        />
+                        <img src="./assets/icons/Avatar.svg" alt="Avatar icon" />
                         <div class="icon-text">
                             <span>Rudra Devi</span>
                             <span>rudra.devi@gmail.com</span>
@@ -218,9 +215,7 @@
                     <div class="metric-card">
                         <div class="metric-card__heading">
                             <h2>Total Events</h2>
-                            <ion-icon
-                                name="information-circle-outline"
-                            ></ion-icon>
+                            <ion-icon name="information-circle-outline"></ion-icon>
                         </div>
                         <div class="metric-card__value">
                             <span>100,000</span>
@@ -236,9 +231,7 @@
                     <div class="metric-card">
                         <div class="metric-card__heading">
                             <h2>Active Speakers</h2>
-                            <ion-icon
-                                name="information-circle-outline"
-                            ></ion-icon>
+                            <ion-icon name="information-circle-outline"></ion-icon>
                         </div>
                         <div class="metric-card__value">
                             <span>25</span>
@@ -254,9 +247,7 @@
                     <div class="metric-card">
                         <div class="metric-card__heading">
                             <h2>Total Registrations</h2>
-                            <ion-icon
-                                name="information-circle-outline"
-                            ></ion-icon>
+                            <ion-icon name="information-circle-outline"></ion-icon>
                         </div>
                         <div class="metric-card__value">
                             <span>300</span>
@@ -272,9 +263,7 @@
                     <div class="metric-card">
                         <div class="metric-card__heading">
                             <h2>Total Revenue</h2>
-                            <ion-icon
-                                name="information-circle-outline"
-                            ></ion-icon>
+                            <ion-icon name="information-circle-outline"></ion-icon>
                         </div>
                         <div class="metric-card__value">
                             <span>&dollar;500,000</span>
@@ -301,11 +290,10 @@
                             <div class="event-carousel__text">
                                 <h3>Latest News & Updates</h3>
                                 <span
-                                    >Turpis interdum nunc varius ornare
-                                    dignissim pretium. Massa ornare quis aliquet
-                                    sed vitae. Sed velit nisi, fermentum erat.
-                                    Fringilla purus, erat fringilla tincidunt
-                                    quisque non. Pellentesque in ut
+                                    >Turpis interdum nunc varius ornare dignissim pretium.
+                                    Massa ornare quis aliquet sed vitae. Sed velit nisi,
+                                    fermentum erat. Fringilla purus, erat fringilla
+                                    tincidunt quisque non. Pellentesque in ut
                                     tellus.</span
                                 >
                             </div>
@@ -315,11 +303,10 @@
                             <div class="event-carousel__text">
                                 <h3>Latest News & Updates</h3>
                                 <span
-                                    >Turpis interdum nunc varius ornare
-                                    dignissim pretium. Massa ornare quis aliquet
-                                    sed vitae. Sed velit nisi, fermentum erat.
-                                    Fringilla purus, erat fringilla tincidunt
-                                    quisque non. Pellentesque in ut
+                                    >Turpis interdum nunc varius ornare dignissim pretium.
+                                    Massa ornare quis aliquet sed vitae. Sed velit nisi,
+                                    fermentum erat. Fringilla purus, erat fringilla
+                                    tincidunt quisque non. Pellentesque in ut
                                     tellus.</span
                                 >
                             </div>
@@ -356,17 +343,22 @@
                         ></ion-icon>
                     </label>
                     <select name="date" id="date">
-                        <option value="Date">Date</option>
+                        <option value="Date" selected disabled>Date</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
                     </select>
                     <select name="status" id="status">
-                        <option value="Status">Status</option>
+                        <option value="Status" selected disabled>Status</option>
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="in-progress">In Progress</option>
                     </select>
                     <select name="name" id="name">
                         <option value="name">Name</option>
                     </select>
-                    <span class="event-inputs__results-num"
-                        >Displaying 100 results</span
-                    >
+                    <span class="event-inputs__results-num">Displaying 100 results</span>
                     <div class="event-details__sort">
                         <span>Sort:</span>
                         <select name="recent" id="recent">
@@ -392,7 +384,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr status="completed" date="october">
                             <td class="modal-data">Cloud Innovation Summit</td>
                             <td>2024-10-15</td>
                             <td>Jane Doe</td>
@@ -403,10 +395,8 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
-                            <td class="modal-data">
-                                Blockchain Revolution Conference
-                            </td>
+                        <tr status="in-progress" date="november">
+                            <td class="modal-data">Blockchain Revolution Conference</td>
                             <td>2024-11-05</td>
                             <td>Dr. Peter Smith</td>
                             <td>
@@ -416,10 +406,8 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
-                            <td class="modal-data">
-                                AI in Healthcare Symposium
-                            </td>
+                        <tr status="completed" date="december">
+                            <td class="modal-data">AI in Healthcare Symposium</td>
                             <td>2024-12-01</td>
                             <td>Dr. Aisha Malik</td>
                             <td>
@@ -429,7 +417,7 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
+                        <tr status="completed" date="october">
                             <td class="modal-data">Future of Fintech Forum</td>
                             <td>2024-10-25</td>
                             <td>Jane Lee</td>
@@ -440,10 +428,8 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
-                            <td class="modal-data">
-                                Data Analytics in Business
-                            </td>
+                        <tr status="completed" date="november">
+                            <td class="modal-data">Data Analytics in Business</td>
                             <td>2024-11-12</td>
                             <td>Rachel Moore</td>
                             <td>
@@ -453,7 +439,7 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
+                        <tr status="completed" date="september">
                             <td class="modal-data">Sustainable Energy Expo</td>
                             <td>2024-09-28</td>
                             <td>Prof. Alan Green</td>
@@ -464,7 +450,7 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
+                        <tr status="in-progress" date="october">
                             <td class="modal-data">Web3 Interfaces Workshop</td>
                             <td>2024-10-10</td>
                             <td>Kevin Adams</td>
@@ -475,10 +461,8 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
-                            <td class="modal-data">
-                                Cyber Security for Startups
-                            </td>
+                        <tr status="completed" date="november">
+                            <td class="modal-data">Cyber Security for Startups</td>
                             <td>2024-11-19</td>
                             <td>Emily Zhang</td>
                             <td>
@@ -488,7 +472,7 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
+                        <tr status="in-progress" date="october">
                             <td class="modal-data">Smart Cities Forum</td>
                             <td>2024-10-18</td>
                             <td>Dr. Maria Hernandez</td>
@@ -499,7 +483,7 @@
                                 >
                             </td>
                         </tr>
-                        <tr>
+                        <tr status="in-progress" date="september">
                             <td class="modal-data">Tech Safari Mixer</td>
                             <td>2024-09-39</td>
                             <td>Guest Panel</td>
@@ -518,9 +502,7 @@
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <span class="accordion-icon">&#10095;</span>
-                            <span class="accordion-text"
-                                >Cloud Innovation Summit</span
-                            >
+                            <span class="accordion-text">Cloud Innovation Summit</span>
                             <span class="status completed">Completed</span>
                         </div>
                         <div class="accordion-content">
@@ -546,9 +528,7 @@
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <span class="accordion-icon">&#10095;</span>
-                            <span class="accordion-text"
-                                >AI in Healthcare Symposium</span
-                            >
+                            <span class="accordion-text">AI in Healthcare Symposium</span>
                             <span class="status completed">Completed</span>
                         </div>
                         <div class="accordion-content">
@@ -560,9 +540,7 @@
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <span class="accordion-icon">&#10095;</span>
-                            <span class="accordion-text"
-                                >Future of Fintech Forum</span
-                            >
+                            <span class="accordion-text">Future of Fintech Forum</span>
                             <span class="status completed">Completed</span>
                         </div>
                         <div class="accordion-content">
@@ -574,9 +552,7 @@
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <span class="accordion-icon">&#10095;</span>
-                            <span class="accordion-text"
-                                >Data Analytics in Business</span
-                            >
+                            <span class="accordion-text">Data Analytics in Business</span>
                             <span class="status completed">Completed</span>
                         </div>
                         <div class="accordion-content">
@@ -588,9 +564,7 @@
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <span class="accordion-icon">&#10095;</span>
-                            <span class="accordion-text"
-                                >Sustainable Energy Expo</span
-                            >
+                            <span class="accordion-text">Sustainable Energy Expo</span>
                             <span class="status completed">Completed</span>
                         </div>
                         <div class="accordion-content">
@@ -602,9 +576,7 @@
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <span class="accordion-icon">&#10095;</span>
-                            <span class="accordion-text"
-                                >Web3 Interfaces Workshop</span
-                            >
+                            <span class="accordion-text">Web3 Interfaces Workshop</span>
                             <span class="status in-progress">In Progress</span>
                         </div>
                         <div class="accordion-content">
@@ -630,9 +602,7 @@
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <span class="accordion-icon">&#10095;</span>
-                            <span class="accordion-text"
-                                >Smart Cities Forum</span
-                            >
+                            <span class="accordion-text">Smart Cities Forum</span>
                             <span class="status in-progress">In Progress</span>
                         </div>
                         <div class="accordion-content">
@@ -644,9 +614,7 @@
                     <div class="accordion-item">
                         <div class="accordion-header">
                             <span class="accordion-icon">&#10095;</span>
-                            <span class="accordion-text"
-                                >Tech Safari Mixer</span
-                            >
+                            <span class="accordion-text">Tech Safari Mixer</span>
                             <span class="status in-progress">In Progress</span>
                         </div>
                         <div class="accordion-content">
@@ -682,8 +650,8 @@
                                 />
                             </div>
                             <p id="modalEventSpeakers">
-                                3 Guest Speakers: Speaker name A, Speaker name
-                                B, Speaker name C.
+                                3 Guest Speakers: Speaker name A, Speaker name B, Speaker
+                                name C.
                             </p>
                             <p id="modalEventAttendees">300 Attendees</p>
                         </div>

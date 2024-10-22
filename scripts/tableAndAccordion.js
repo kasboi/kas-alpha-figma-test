@@ -78,8 +78,7 @@ const closeModalBtn = document.querySelector(".close")
 
 // Function to open the modal with event details
 function showModal(index) {
-    document.getElementById("modalEventName").textContent =
-        table_data[index].name
+    document.getElementById("modalEventName").textContent = table_data[index].name
     document.getElementById(
         "modalEventDate"
     ).textContent = `Date: ${table_data[index].date}`
@@ -131,8 +130,50 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
 // Add click event listener to each accordion text
 document.querySelectorAll(".accordion-text").forEach((row, index) => {
     row.addEventListener("click", function (e) {
-        
         showModal(index)
         e.stopPropagation()
     })
+})
+
+// Sort table based on status
+const status_select = document.querySelector("#status")
+const table_rows = document.querySelectorAll("tr")
+const completed_events = document.querySelectorAll("[status=completed")
+const inProgress_events = document.querySelectorAll("[status=in-progress")
+
+
+function tr_filter(value, attr_data) {
+    table_rows.forEach((el) => {
+        const status = el.getAttribute(attr_data)
+        console.log(status, value);
+        
+        // To ignore the header table row since it has no status attribute
+        if (status) el.style.display = status === value ? "table-row" : "none"
+    })
+}
+
+// Filter the table on value change of the status dropdown
+status_select.addEventListener("change", () => {
+    const option = status_select.value
+
+
+    if (option === "completed") {
+        tr_filter("completed", "status")
+    } else if (option === "in-progress") {
+        tr_filter("in-progress", "status")
+    } else {
+        table_rows.forEach((el) => (el.style.display = "table-row"))
+    }
+})
+
+// Sort table based on date
+const date_select = document.querySelector("#date")
+
+date_select.addEventListener("change", () => {
+    // Reset the status dropdown
+    status_select.selectedIndex = 1
+    status_select.dispatchEvent(new Event('change'));
+
+    const option = date_select.value
+    tr_filter(option, "date")
 })

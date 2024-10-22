@@ -1,7 +1,6 @@
 import createChart from "./scripts/chart"
 import "./scripts/carousel"
-import "./scripts/event-table"
-import "./scripts/accordion"
+import "./scripts/tableAndAccordion"
 import "./scripts/responsiveness"
 
 // Navbar state
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const themeBtn = document.querySelector("input")
     const darkModeText = document.querySelector(".dark-mode-text")
-
 
     // Toggle sidebar class on button click
     collapseBtn.addEventListener("click", () => {
@@ -38,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Theme toggle event listener
     darkModeText.addEventListener("click", () => {
-        themeBtn.checked = !(themeBtn.checked)
-        
-        !(themeBtn.checked)
+        themeBtn.checked = !themeBtn.checked
+
+        !themeBtn.checked
         const newTheme = themeBtn.checked ? "dark" : "light"
 
         document.documentElement.setAttribute("data-theme", newTheme)
@@ -127,8 +125,7 @@ document.querySelectorAll(".menu-icon").forEach((item) => {
 
 function changeIcon(state) {
     if (state) {
-        document.querySelector("button.menu-icon").style.display =
-            "inline-block"
+        document.querySelector("button.menu-icon").style.display = "inline-block"
         document.querySelector("img.menu-icon").style.display = "none"
     } else {
         document.querySelector("button.menu-icon").style.display = "none"
