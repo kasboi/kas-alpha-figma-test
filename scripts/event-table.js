@@ -113,3 +113,26 @@ document.querySelectorAll("tr").forEach((row, index) => {
 })
 
 // SCRIPT
+// Accordion functionality
+document.querySelectorAll(".accordion-header").forEach((header) => {
+    header.addEventListener("click", function () {
+        const content = this.nextElementSibling
+        const icon = this.querySelector(".accordion-icon")
+
+        // Toggle the content visibility
+        if (content.style.display === "flex") {
+            content.style.display = "none"
+        } else {
+            content.style.display = "flex"
+        }
+    })
+})
+
+// Add click event listener to each accordion text
+document.querySelectorAll(".accordion-text").forEach((row, index) => {
+    row.addEventListener("click", function (e) {
+        
+        showModal(index)
+        e.stopPropagation()
+    })
+})
