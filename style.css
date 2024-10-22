@@ -1000,9 +1000,7 @@ tbody {
         font-size: 18px;
     }
 
-    .event-chart canvas {
-        transform: scale(1);
-    }
+    
 
     .event-carousel__text {
         bottom: 5%;
