@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     initialNavbar()
 
     const themeBtn = document.querySelector("input")
-    themeBtn.addEventListener("click", () => {
-        console.log(themeBtn.checked)
-    })
 
     // Toggle sidebar class on button click
     collapseBtn.addEventListener("click", () => {
@@ -53,12 +50,22 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 })
 
+function nabarIconToggle() {
+    const menuIconDark = document.querySelector("#menu-dark")
+    const menuIconLight = document.querySelector("#menu-light")
+
+    if (theme === "dark") {
+        menuIconDark.style.display = "inline"
+        menuIconLight.style.display = "none"
+    } else {
+        menuIconDark.style.display = "block"
+        menuIconLight.style.display = "inline"
+    }
+}
+
 const footerIconsToggle = (theme) => {
     const footer_icon_dark = document.querySelectorAll(".icon-dark")
     const footer_icon_light = document.querySelectorAll(".icon-light")
-
-    const menuIconDark = document.querySelector("#menu-dark")
-    const menuIconLight = document.querySelector("#menu-light")
 
     if (theme === "dark") {
         // footer_icon_dark.style.display = "none"
@@ -70,8 +77,6 @@ const footerIconsToggle = (theme) => {
             dark.style.display = "none"
             light.style.display = "inline"
         }
-        menuIconDark.style.display = "inline"
-        menuIconLight.style.display = "none"
     } else {
         for (let i = 0; i < footer_icon_dark.length; i++) {
             const dark = footer_icon_dark[i]
@@ -80,8 +85,6 @@ const footerIconsToggle = (theme) => {
             dark.style.display = "inline"
             light.style.display = "none"
         }
-        menuIconDark.style.display = "block"
-        menuIconLight.style.display = "inline"
     }
 }
 // NAVBAR
