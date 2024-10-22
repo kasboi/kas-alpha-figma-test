@@ -11,10 +11,13 @@
     --hover-color: #f1f3f5;
     --border: 1px solid #dee2e6;
     --icon-color: rgba(0, 0, 0, 0.6);
-    --home-icon-bg: #dfbef3;
-
     --table-header-color: #f1f5f9;
     --modal-gray: #f8f9fa;
+    --home-icon-bg: #dfbef3;
+
+    --card-bg: #fff; /* Light mode background */
+    --card-shadow: rgba(0, 0, 0, 0.1); /* Light mode shadow */
+    --card-hover-shadow: rgba(0, 0, 0, 0.2); /* Light mode hover shadow */
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -31,8 +34,11 @@
     --icon-color: rgba(255, 255, 255, 0.4);
     --table-header-color: #6a6676;
     --modal-gray: #ada9bb;
-    --home-icon-bg: #8576FF;
+    --home-icon-bg: #8576ff;
 
+    --card-bg: #2c2c2c; /* Dark mode background */
+    --card-shadow: rgba(255, 255, 255, 0.05); /* Dark mode shadow */
+    --card-hover-shadow: rgba(255, 255, 255, 0.15); /* Dark mode hover shadow */
 
     --hover-color: #ced4da;
     --link-color: #ff8c00;
@@ -48,6 +54,7 @@ body {
     background-color: var(--background-color-primary);
     color: var(--text-color);
     display: flex;
+    visibility: hidden;
 }
 
 /* Sidebar basic styles */
@@ -67,12 +74,12 @@ body {
 }
 
 .logo-box {
-    color: #2563EB;
+    color: #2563eb;
     background-color: #fff;
     padding: 10px;
     font-weight: 600;
-    border: 1px dashed #2563EB;
-    background-color: #93C5FD;
+    border: 1px dashed #2563eb;
+    background-color: #93c5fd;
 }
 
 .logo-box.icon-collapsed {
@@ -87,12 +94,12 @@ body {
 }
 
 .nav-box span {
-    color: #2563EB;
+    color: #2563eb;
     background-color: #fff;
     padding: 10px;
     font-weight: 600;
-    border: 1px dashed #2563EB;
-    background-color: #93C5FD;
+    border: 1px dashed #2563eb;
+    background-color: #93c5fd;
 }
 
 .nav-box button {
@@ -202,7 +209,8 @@ body {
     background-color: var(--hover-color);
 }
 
-.menu-item:nth-child(2), .menu-item:nth-child(2):hover {
+.menu-item:nth-child(2),
+.menu-item:nth-child(2):hover {
     background-color: var(--home-icon-bg);
 }
 
@@ -299,7 +307,46 @@ main h2 {
     border: var(--border);
     border-radius: 2px;
     padding: 20px 15px;
-    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
+    opacity: 0;
+
+    /* Initial scale is 1, fade in from translateX */
+    animation-name: leFadeInRight;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+
+    /* Only animate opacity and transform during keyframes */
+    box-shadow: 0 0 0 var(--card-shadow);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Separate box-shadow and transform */
+}
+
+.metric-card:hover {
+    transform: scale(2);
+    box-shadow: 2px 2px 10px var(--home-icon-bg); /* Shadow on hover */
+}
+
+/* Fade-in right animation */
+@keyframes leFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px); /* Move in from the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End without transform interference */
+    }
+}
+
+.metric-card:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.metric-card:nth-child(3) {
+    animation-delay: 1.2s;
+}
+.metric-card:nth-child(4) {
+    animation-delay: 1.6s;
 }
 
 .metric-card__heading {
@@ -559,7 +606,54 @@ select {
     cursor: pointer;
 }
 
-x .table-controls {
+.status.completed {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d1fae5;
+    color: #10b981;
+    padding: 4px 8px;
+    gap: 8px;
+    border-radius: 100px;
+    width: 99px;
+    height: 24px;
+}
+
+.status.completed .dot {
+    width: 6px;
+    height: 6px;
+    background: #10b981;
+    border-radius: 100px;
+}
+
+.status.in-progress {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbeafe;
+    color: #3b82f6;
+    padding: 4px 8px;
+    gap: 8px;
+    border-radius: 100px;
+    width: 100px;
+    height: 24px;
+}
+.status.status.in-progress .dot {
+    width: 6px;
+    height: 6px;
+    background: #3b82f6;
+    border-radius: 100px;
+}
+
+.table-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -822,7 +916,7 @@ tbody {
         margin-top: 80px;
     }
 
-    .menu-item:nth-child(1){
+    .menu-item:nth-child(1) {
         display: none;
     }
 
@@ -1025,8 +1119,6 @@ tbody {
     main h2 {
         font-size: 18px;
     }
-
-    
 
     .event-carousel__text {
         bottom: 5%;

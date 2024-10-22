@@ -108,9 +108,6 @@ window.onclick = function (event) {
 // Add click event listener to each table row
 document.querySelectorAll("tr").forEach((row, index) => {
     row.addEventListener("click", function () {
-        console.log(index)
-        // Get event details from the data attribute
-        const eventDetails = JSON.parse(this.getAttribute("data-event-details"))
         showModal(index - 1)
     })
 })

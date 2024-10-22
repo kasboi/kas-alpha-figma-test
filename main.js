@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeBtn = document.querySelector("input")
     const darkModeText = document.querySelector(".dark-mode-text")
 
-    darkModeText.addEventListener("click", () => {
-        themeBtn.click()
-    })
 
     // Toggle sidebar class on button click
     collapseBtn.addEventListener("click", () => {
@@ -37,9 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         createChart("light") // Default to light theme if no theme is saved
     }
+    document.body.style.visibility = "visible"
 
     // Theme toggle event listener
-    themeBtn.addEventListener("click", () => {
+    darkModeText.addEventListener("click", () => {
+        themeBtn.checked = !(themeBtn.checked)
+        
+        !(themeBtn.checked)
         const newTheme = themeBtn.checked ? "dark" : "light"
 
         document.documentElement.setAttribute("data-theme", newTheme)
