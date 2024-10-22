@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     initialNavbar()
 
     const themeBtn = document.querySelector("input")
+    const darkModeText = document.querySelector(".dark-mode-text")
+
+    darkModeText.addEventListener("click", () => {
+        themeBtn.click()
+    })
 
     // Toggle sidebar class on button click
     collapseBtn.addEventListener("click", () => {

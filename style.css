@@ -11,6 +11,7 @@
     --hover-color: #f1f3f5;
     --border: 1px solid #dee2e6;
     --icon-color: rgba(0, 0, 0, 0.6);
+    --home-icon-bg: #dfbef3;
 
     --table-header-color: #f1f5f9;
     --modal-gray: #f8f9fa;
@@ -30,6 +31,8 @@
     --icon-color: rgba(255, 255, 255, 0.4);
     --table-header-color: #6a6676;
     --modal-gray: #ada9bb;
+    --home-icon-bg: #8576FF;
+
 
     --hover-color: #ced4da;
     --link-color: #ff8c00;
@@ -63,6 +66,19 @@ body {
     min-width: 60px;
 }
 
+.logo-box {
+    color: #2563EB;
+    background-color: #fff;
+    padding: 10px;
+    font-weight: 600;
+    border: 1px dashed #2563EB;
+    background-color: #93C5FD;
+}
+
+.logo-box.icon-collapsed {
+    width: 100%;
+}
+
 .nav-box {
     display: none;
     justify-content: space-between;
@@ -71,10 +87,12 @@ body {
 }
 
 .nav-box span {
-    color: #000;
+    color: #2563EB;
     background-color: #fff;
     padding: 10px;
     font-weight: 600;
+    border: 1px dashed #2563EB;
+    background-color: #93C5FD;
 }
 
 .nav-box button {
@@ -180,8 +198,12 @@ body {
 }
 
 /* Add hover effects */
-.menu-item:hover {
+.menu-item:not(:nth-child(1)):hover {
     background-color: var(--hover-color);
+}
+
+.menu-item:nth-child(2), .menu-item:nth-child(2):hover {
+    background-color: var(--home-icon-bg);
 }
 
 /* Toggle button */
@@ -798,6 +820,10 @@ tbody {
 
     .menu {
         margin-top: 80px;
+    }
+
+    .menu-item:nth-child(1){
+        display: none;
     }
 
     main {
