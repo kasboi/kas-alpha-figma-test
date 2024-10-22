@@ -819,7 +819,7 @@ tbody {
     }
 
     .event-chart canvas {
-        transform: scale(1.25);
+        transform: scale(1.15);
     }
 
     .metric-container {
