@@ -89,12 +89,14 @@ const footerIconsToggle = (theme) => {
 const sidebar = document.querySelector(".sidebar")
 const nav_box = document.querySelector(".nav-box")
 function initialNavbar() {
-    sidebar.style.display = "none"
-    setTimeout(() => {
+    if (window.innerWidth < 901) {
         sidebar.style.display = "none"
-    }, 300)
-    nav_box.style.position = "relative"
-    isOpen = false
+        setTimeout(() => {
+            sidebar.style.display = "none"
+        }, 300)
+        nav_box.style.position = "relative"
+        isOpen = false
+    }
 }
 
 document.querySelectorAll(".menu-icon").forEach((item) => {

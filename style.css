@@ -92,6 +92,10 @@ body {
     align-items: center;
 }
 
+.menu-icon {
+    display: none;
+}
+
 /* Menu styles */
 .menu {
     list-style: none;
