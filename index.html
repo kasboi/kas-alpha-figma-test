@@ -14,6 +14,12 @@
         <title>Vite App</title>
     </head>
     <body>
+        <div class="nav-box">
+            <span>Full Logo</span>
+            <button class="nav-box__close menu-icon">&times;</button>
+            <img src="./assets/icons/menu.svg" width="32px" class="menu-icon" id="menu-dark" alt="menu icon">
+            <img src="./assets/icons/menu-white.svg" width="32px" class="menu-icon" id="menu-light" alt="menu icon">
+        </div>
         <nav class="sidebar">
             <!-- <button id="toggle-btn" class="toggle-btn">Toggle</button> -->
             <ul class="menu">
@@ -365,6 +371,7 @@
                         </button>
                     </div>
                 </div>
+                <!-- EVENT DETAILS -->
                 <table class="events-table">
                     <thead>
                         <tr>
@@ -375,10 +382,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr
-                            data-event-details='{"name":"Event 1", "date":"2024-10-25", "description":"Description of Event 1"}'
-                        >
-                            <td>Cloud Innovation Summit</td>
+                        <tr>
+                            <td class="modal-data">Cloud Innovation Summit</td>
                             <td>2024-10-15</td>
                             <td>Jane Doe</td>
                             <td>
@@ -389,7 +394,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Blockchain Revolution Conference</td>
+                            <td class="modal-data">
+                                Blockchain Revolution Conference
+                            </td>
                             <td>2024-11-05</td>
                             <td>Dr. Peter Smith</td>
                             <td>
@@ -400,7 +407,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>AI in Healthcare Symposium</td>
+                            <td class="modal-data">
+                                AI in Healthcare Symposium
+                            </td>
                             <td>2024-12-01</td>
                             <td>Dr. Aisha Malik</td>
                             <td>
@@ -411,7 +420,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Future of Fintech Forum</td>
+                            <td class="modal-data">Future of Fintech Forum</td>
                             <td>2024-10-25</td>
                             <td>Jane Lee</td>
                             <td>
@@ -422,7 +431,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Data Analytics in Business</td>
+                            <td class="modal-data">
+                                Data Analytics in Business
+                            </td>
                             <td>2024-11-12</td>
                             <td>Rachel Moore</td>
                             <td>
@@ -433,7 +444,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Sustainable Energy Expo</td>
+                            <td class="modal-data">Sustainable Energy Expo</td>
                             <td>2024-09-28</td>
                             <td>Prof. Alan Green</td>
                             <td>
@@ -444,7 +455,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Web3 Interfaces Workshop</td>
+                            <td class="modal-data">Web3 Interfaces Workshop</td>
                             <td>2024-10-10</td>
                             <td>Kevin Adams</td>
                             <td>
@@ -455,7 +466,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Cyber Security for Startups</td>
+                            <td class="modal-data">
+                                Cyber Security for Startups
+                            </td>
                             <td>2024-11-19</td>
                             <td>Emily Zhang</td>
                             <td>
@@ -466,7 +479,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Smart Cities Forum</td>
+                            <td class="modal-data">Smart Cities Forum</td>
                             <td>2024-10-18</td>
                             <td>Dr. Maria Hernandez</td>
                             <td>
@@ -477,7 +490,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Tech Safari Mixer</td>
+                            <td class="modal-data">Tech Safari Mixer</td>
                             <td>2024-09-39</td>
                             <td>Guest Panel</td>
                             <td>
@@ -489,13 +502,187 @@
                         </tr>
                     </tbody>
                 </table>
+                <!-- Accordion (Mobile) -->
+                <div class="accordion" id="eventAccordion">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Cloud Innovation Summit</span
+                            >
+                            <span class="status completed">Completed</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Jane Doe</p>
+                            <p>2024-10-15</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Blockchain Revolution Conference</span
+                            >
+                            <span class="status in-progress">In Progress</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Dr. Peter Smith</p>
+                            <p>2024-11-05</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >AI in Healthcare Symposium</span
+                            >
+                            <span class="status completed">Completed</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Dr. Aisha Malik</p>
+                            <p>2024-12-01</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 4 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Future of Fintech Forum</span
+                            >
+                            <span class="status completed">Completed</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Jane Lee</p>
+                            <p>2024-10-25</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 5 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Data Analytics in Business</span
+                            >
+                            <span class="status completed">Completed</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Rachel Moore</p>
+                            <p>2024-11-12</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 6 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Sustainable Energy Expo</span
+                            >
+                            <span class="status completed">Completed</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Prof. Alan Green</p>
+                            <p>2024-09-28</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 7 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Web3 Interfaces Workshop</span
+                            >
+                            <span class="status in-progress">In Progress</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Kevin Adams</p>
+                            <p>2024-10-10</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 8 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Cyber Security for Startups</span
+                            >
+                            <span class="status completed">Completed</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Emily Zhang</p>
+                            <p>2024-11-19</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 9 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Smart Cities Forum</span
+                            >
+                            <span class="status in-progress">In Progress</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Dr. Maria Hernandez</p>
+                            <p>2024-10-18</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 10 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="accordion-icon">&#10095;</span>
+                            <span class="accordion-text"
+                                >Tech Safari Mixer</span
+                            >
+                            <span class="status in-progress">In Progress</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Guest Panel</p>
+                            <p>2024-09-29</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Modal -->
                 <div id="eventModal" class="modal">
                     <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 id="modalEventName"></h2>
-                        <p id="modalEventDate"></p>
-                        <p id="modalEventDescription"></p>
+                        <div class="modal-text">
+                            <div class="modal-text__container">
+                                <div class="modal-text__container-heading">
+                                    <h3 id="modalEventName">Event Name</h3>
+                                    <p id="modalEventDate">Event Date</p>
+                                </div>
+                                <span class="close">&times;</span>
+                            </div>
+                            <p id="modalEventDescription">Event Description</p>
+                            <div id="modalEventAvatars">
+                                <img
+                                    src="./assets/img/event-avatar_1.svg"
+                                    alt="event avatars"
+                                />
+                                <img
+                                    src="./assets/img/event-avatar_2.svg"
+                                    alt="event avatars"
+                                />
+                                <img
+                                    src="./assets/img/event-avatar_3.svg"
+                                    alt="event avatars"
+                                />
+                            </div>
+                            <p id="modalEventSpeakers">
+                                3 Guest Speakers: Speaker name A, Speaker name
+                                B, Speaker name C.
+                            </p>
+                            <p id="modalEventAttendees">300 Attendees</p>
+                        </div>
+
+                        <div class="modalButtons">
+                            <button id="edit">Edit</button>
+                            <button id="delete">Delete</button>
+                            <button id="completed">Mark as completed</button>
+                        </div>
                     </div>
                 </div>
                 <!-- Pagination -->
@@ -518,6 +705,64 @@
                 </div>
             </section>
         </main>
+        <nav class="footer-nav">
+            <div class="footer-nav__item">
+                <img src="./assets/icons/home-white.svg" alt="home icon" />
+                <span>Home</span>
+            </div>
+            <div class="footer-nav__item">
+                <img
+                    src="./assets/icons/calendar-white.svg"
+                    alt="calendar icon"
+                    class="icon-light"
+                />
+                <img
+                    src="./assets/icons/calendar.svg"
+                    alt="calendar icon"
+                    class="icon-dark"
+                />
+                <span>Events</span>
+            </div>
+            <div class="footer-nav__item">
+                <img
+                    src="./assets/icons/speaker-white.svg"
+                    alt="speaker icon"
+                    class="icon-light"
+                />
+                <img
+                    src="./assets/icons/speaker.svg"
+                    alt="speaker icon"
+                    class="icon-dark"
+                />
+                <span>Speakers</span>
+            </div>
+            <div class="footer-nav__item">
+                <img
+                    src="./assets/icons/document-white.svg"
+                    alt="document icon"
+                    class="icon-light"
+                />
+                <img
+                    src="./assets/icons/document.svg"
+                    alt="document icon"
+                    class="icon-dark"
+                />
+                <span>Reports</span>
+            </div>
+            <div class="footer-nav__item">
+                <img
+                    src="./assets/icons/user-circle-white.svg"
+                    alt="user icon"
+                    class="icon-light"
+                />
+                <img
+                    src="./assets/icons/user-circle.svg"
+                    alt="user icon"
+                    class="icon-dark"
+                />
+                <span>Profile</span>
+            </div>
+        </nav>
         <script type="module" src="/main.js"></script>
         <script
             type="module"
