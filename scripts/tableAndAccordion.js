@@ -149,17 +149,26 @@ function tr_filter(value, attr_data) {
     })
 }
 
+const accordion_item = document.querySelectorAll(".accordion-item")
+const accordionItemFilter = (value, attr_data) => {
+    accordion_item.forEach((el) => {
+        const status = el.getAttribute(attr_data)
+
+        // To ignore the header table row since it has no status attribute
+        if (status) el.style.display = status === value ? "block" : "none"
+    })
+}
+
 // Filter the table on value change of the status dropdown
 status_select.addEventListener("change", () => {
-
     const option = status_select.value
 
-    if (option === "completed") {
-        tr_filter("completed", "status")
-    } else if (option === "in-progress") {
-        tr_filter("in-progress", "status")
+    if (option === "completed" || option === "in-progress") {
+        tr_filter(option, "status")
+        accordionItemFilter(option, "status")
     } else {
         table_rows.forEach((el) => (el.style.display = "table-row"))
+        accordion_item.forEach(el => el.style.display = "block")
     }
 })
 
@@ -172,4 +181,5 @@ date_select.addEventListener("change", () => {
 
     const option = date_select.value
     tr_filter(option, "date")
+    accordionItemFilter(option, "date")
 })
