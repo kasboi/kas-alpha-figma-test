@@ -92,7 +92,7 @@ function showModal(index) {
     modal.style.display = "block"
 }
 
-// Add event listener to close modal
+// event listener to close modal
 closeModalBtn.onclick = function () {
     modal.style.display = "none"
 }
@@ -104,7 +104,6 @@ window.onclick = function (event) {
     }
 }
 
-// Add click event listener to each table row
 document.querySelectorAll("tr").forEach((row, index) => {
     row.addEventListener("click", function () {
         showModal(index - 1)
@@ -127,7 +126,7 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
     })
 })
 
-// Add click event listener to each accordion text
+// click event listener to each accordion text
 document.querySelectorAll(".accordion-text").forEach((row, index) => {
     row.addEventListener("click", function (e) {
         showModal(index)
@@ -140,6 +139,7 @@ const status_select = document.querySelector("#status")
 const date_select = document.querySelector("#date")
 const table_rows = document.querySelectorAll("tr")
 
+// Filter table items
 function tr_filter(value, attr_data) {
     table_rows.forEach((el) => {
         const status = el.getAttribute(attr_data)
@@ -148,13 +148,12 @@ function tr_filter(value, attr_data) {
         if (status) el.style.display = status === value ? "table-row" : "none"
     })
 }
-
+// Filter accordion items
 const accordion_item = document.querySelectorAll(".accordion-item")
 const accordionItemFilter = (value, attr_data) => {
     accordion_item.forEach((el) => {
         const status = el.getAttribute(attr_data)
 
-        // To ignore the header table row since it has no status attribute
         if (status) el.style.display = status === value ? "block" : "none"
     })
 }
@@ -168,12 +167,11 @@ status_select.addEventListener("change", () => {
         accordionItemFilter(option, "status")
     } else {
         table_rows.forEach((el) => (el.style.display = "table-row"))
-        accordion_item.forEach(el => el.style.display = "block")
+        accordion_item.forEach((el) => (el.style.display = "block"))
     }
 })
 
 // Sort table based on date
-
 date_select.addEventListener("change", () => {
     // Reset the status dropdown
     status_select.selectedIndex = 1

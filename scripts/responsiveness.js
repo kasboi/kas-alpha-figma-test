@@ -14,7 +14,7 @@ function checkScreenSize() {
 // Check screen size on initial load
 checkScreenSize()
 
-// Add event listener for window resize
+// Event listener for window resize
 window.addEventListener("resize", () => {
     checkScreenSize()
 })

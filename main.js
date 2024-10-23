@@ -72,8 +72,6 @@ const footerIconsToggle = (theme) => {
     const footer_icon_light = document.querySelectorAll(".icon-light")
 
     if (theme === "dark") {
-        // footer_icon_dark.style.display = "none"
-        // footer_icon_light.style.display = "inline"
         for (let i = 0; i < footer_icon_dark.length; i++) {
             const dark = footer_icon_dark[i]
             const light = footer_icon_light[i]
@@ -91,8 +89,8 @@ const footerIconsToggle = (theme) => {
         }
     }
 }
-// NAVBAR
 
+// NAVBAR
 const sidebar = document.querySelector(".sidebar")
 const nav_box = document.querySelector(".nav-box")
 function initialNavbar() {
